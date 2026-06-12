@@ -18,58 +18,113 @@ Guides d'utilisation de l'identité visuelle pour la marque **Rewake**.
 
 ### Palette Principale
 
-| Couleur | Code Hex | Tailwind | Utilisation |
-|---------|----------|---------|-------------|
-| **Emerald Primary** | `#19534F` ou `#006045` | `emerald-800` | Couleur de marque principale |
-| Emerald Light | `#10B981` | `emerald-500` | Accents, boutons, liens |
-| Emerald Dark | `#002C22` | `emerald-950` | Textes sur fonds clairs |
-| Emerald Subtle | `#D1FAE5` | `emerald-100` | Fonds, survols |
+| Couleur | Code Hex | Variable CSS | Utilisation |
+|---------|----------|--------------|-------------|
+| **Primary** | `#19534f` | `--color-primary` | Couleur de marque principale |
+| Primary Hover | `#006045` | `--color-primary-hover` | Survol des boutons/liens |
+| Primary Foreground | `#FFFFFF` | `--color-primary-foreground` | Texte sur fond primaire |
+| **Success** | `#00a63e` | `--color-success` | Actions réussies |
+| Success Hover | `#008236` | `--color-success-hover` | Survol |
+| Success Foreground | `#FFFFFF` | `--color-success-foreground` | Texte sur fond succès |
+| **Destructive** | `#ef4444` | `--color-destructive` | Actions dangereuses |
+| Destructive Hover | `#dc2626` | `--color-destructive-hover` | Survol |
+| Destructive Foreground | `#FFFFFF` | `--color-destructive-foreground` | Texte sur fond destructif |
 
-### Palette Neutre
+### Palette Neutre (Light Mode)
 
-| Couleur | Code Hex | Tailwind | Utilisation |
-|---------|----------|---------|-------------|
-| Blanc | `#FFFFFF` | `white` | Arrière-plans, texte |
-| Gris Clair | `#F9FAFB` | `gray-50` | Fonds |
-| Gris Moyen | `#6B7280` | `gray-500` | Texte secondaire |
-| Noir | `#111827` | `gray-900` | Texte principal |
+| Couleur | Code Hex | Variable CSS | Utilisation |
+|---------|----------|--------------|-------------|
+| Background | `#FFFFFF` | `--color-background` | Arrière-plan principal |
+| Foreground | `#0f172a` | `--color-foreground` | Texte principal |
+| Card | `#FFFFFF` | `--color-card` | Fonds des cartes |
+| Card Foreground | `#0f172a` | `--color-card-foreground` | Texte dans les cartes |
+| Secondary | `#f1f5f9` | `--color-secondary` | Boutons secondaires |
+| Secondary Foreground | `#0f172a` | `--color-secondary-foreground` | Texte sur secondaire |
+| Muted | `#f1f5f9` | `--color-muted` | Éléments discrèts |
+| Muted Foreground | `#64748b` | `--color-muted-foreground` | Texte secondaire |
+| Accent | `#e2e8f0` | `--color-accent` | Accents subtils |
+| Accent Foreground | `#0f172a` | `--color-accent-foreground` | Texte sur accent |
+| Border | `#e2e8f0` | `--color-border` | Bordures |
+| Input | `#f8fafc` | `--color-input` | Champs de saisie |
+| Ring | `#059669` | `--color-ring` | Contours focus |
+
+### Palette Neutre (Dark Mode)
+
+| Couleur | Code Hex | Variable CSS | Utilisation |
+|---------|----------|--------------|-------------|
+| Background | `#0f172a` | `--color-background` | Arrière-plan principal |
+| Foreground | `#f1f5f9` | `--color-foreground` | Texte principal |
+| Card | `#1e293b` | `--color-card` | Fonds des cartes |
+| Card Foreground | `#f1f5f9` | `--color-card-foreground` | Texte dans les cartes |
+| Secondary | `#334155` | `--color-secondary` | Boutons secondaires |
+| Secondary Foreground | `#f1f5f9` | `--color-secondary-foreground` | Texte sur secondaire |
+| Muted | `#334155` | `--color-muted` | Éléments discrèts |
+| Muted Foreground | `#94a3b8` | `--color-muted-foreground` | Texte secondaire |
+| Accent | `#475569` | `--color-accent` | Accents subtils |
+| Accent Foreground | `#f1f5f9` | `--color-accent-foreground` | Texte sur accent |
+| Border | `#334155` | `--color-border` | Bordures |
+| Input | `#1d293d` | `--color-input` | Champs de saisie |
+| Ring | `#10b981` | `--color-ring` | Contours focus |
+
+### Rayons
+
+| Variable | Valeur | Utilisation |
+|----------|--------|-------------|
+| `--radius-sm` | `calc(var(--radius) - 4px)` | Petits rayons |
+| `--radius-md` | `calc(var(--radius) - 2px)` | Rayons moyens |
+| `--radius-lg` | `var(--radius)` | Grands rayons |
+| `--radius-xl` | `calc(var(--radius) + 4px)` | Rayons extra-larges |
+
+**Rayon de base**: `0.5rem`
 
 ### Règles d'Utilisation
-- **Couleur principale** : Utiliser `#19534F` (extraite du logo) pour l'identité de marque
+- **Couleur principale** : Utiliser `--color-primary` (`#19534f`) pour l'identité de marque
 - **Contraste** : Toujours vérifier le contraste texte/fond (WCAG AA minimum)
 - **Combinaisons autorisées** :
-  - `#19534F` + Blanc ✅
-  - `#19534F` + `emerald-100` ✅
-  - `#19534F` + `gray-50` ✅
-  - Éviter : `#19534F` + `emerald-900` (manque de contraste) ❌
+  - `--color-primary` + `--color-primary-foreground` ✅
+  - `--color-primary` + `--color-background` ✅
+  - `--color-primary` + `--color-secondary` ✅
+  - Éviter : `--color-primary` + `--color-destructive` (conflit visuel) ❌
+- **Variables CSS** : Toujours utiliser les variables (`--color-*`) plutôt que les codes hex direct
 
 ---
 
 ## 🔤 Typographie
 
 ### Police Principale
-- **Nom** : Geist Sans
-- **Source** : [Vercel Geist](https://vercel.com/font)
-- **Poids disponibles** : 400, 500, 600, 700
+- **Nom** : Roboto
+- **Source** : [Google Fonts - Roboto](https://fonts.google.com/specimen/Roboto)
+- **Poids disponibles** : 300, 400, 500, 700, 900
 
 ### Hiérarchie
 
-| Éléments | Taille | Poids | Couleur | Exemple |
-|----------|--------|-------|---------|---------|
-| H1 | `4xl` (2.25rem) | 700 | `gray-900` | Titres de page |
-| H2 | `3xl` (1.875rem) | 600 | `gray-900` | Sections |
-| H3 | `2xl` (1.5rem) | 600 | `#19534F` | Sous-sections |
-| H4 | `xl` (1.25rem) | 500 | `gray-900` | |
-| Body | `base` (1rem) | 400 | `gray-700` | Texte principal |
-| Small | `sm` (0.875rem) | 400 | `gray-500` | Légendes |
-| Lien | `base` (1rem) | 500 | `#10B981` | Liens cliquables |
+| Éléments | Taille | Poids | Police | Couleur | Exemple |
+|----------|--------|-------|--------|---------|---------|
+| H1 | `4xl` (2.25rem) | 700 | Roboto | `--color-foreground` | Titres de page |
+| H2 | `3xl` (1.875rem) | 600 | Roboto | `--color-foreground` | Sections |
+| H3 | `2xl` (1.5rem) | 600 | Roboto | `--color-primary` | Sous-sections |
+| H4 | `xl` (1.25rem) | 500 | Roboto | `--color-foreground` | |
+| Body | `base` (1rem) | 400 | Roboto | `--color-muted-foreground` | Texte principal |
+| Small | `sm` (0.875rem) | 400 | Roboto | `--color-muted-foreground` | Légendes |
+| Lien | `base` (1rem) | 500 | Roboto | `--color-primary` | Liens cliquables |
+| Code | `sm` (0.875rem) | 400 | Roboto Mono | `--color-muted-foreground` | Extraits de code |
+
+### Polices
+- **Principale**: Roboto (tout le texte standard)
+- **Code**: Roboto Mono (pour les extraits de code et éléments monospace)
+
+### Espacements
+Utiliser les classes Tailwind v4 standard : `p-4`, `gap-2`, `m-1`, etc.
+
+### Breakpoints
+Utiliser les breakpoints Tailwind v4 standard : `sm:`, `md:`, `lg:`, `xl:`, `2xl:`
 
 ---
 
 ## 🏷️ Logo
 
 ### Fichiers Disponibles
-- `/logos/logo_rewake.svg` — Logo principal (couleur `#19534F`)
+- `/logos/logo_rewake.svg` — Logo principal (couleur `#006045`)
 - `/logos/logo_rewake_white.svg` — Version blanche pour fonds sombres
 - `/logos/logo_rewake_black.svg` — Version noire pour fonds clairs
 
@@ -91,7 +146,7 @@ Guides d'utilisation de l'identité visuelle pour la marque **Rewake**.
 
 ## 🖼️ Exemples d'Application
 
-[Application interne](https://app.rewake.fr)
+[Application interne](https://app.rewake.fr)  
 [Page de redirection SAV](https://sav.rewake.fr)
 
 ---
@@ -100,7 +155,8 @@ Guides d'utilisation de l'identité visuelle pour la marque **Rewake**.
 
 Avant de publier :
 - [ ] Adaptation mobile testée
-- [ ] Couleur principale `#19534F` ou `emerald-900` utilisée correctement
+- [ ] Couleur principale `--color-primary` (`#006045`) utilisée correctement
+- [ ] Variables CSS (`--color-*`) utilisées plutôt que codes hex
 - [ ] Cohérence avec les exemples existants (app.rewake.fr, sav.rewake.fr)
 
 ---
@@ -109,7 +165,7 @@ Avant de publier :
 
 ### Outils Recommandés
 - **Couleurs** : [Tailwind Color Picker](https://tailwindcss.com/docs/customizing-colors)
-- **Polices** : [Google Fonts - Inter](https://fonts.google.com/specimen/Inter) (fallback)
+- **Polices** : [Google Fonts - Roboto](https://fonts.google.com/specimen/Roboto)
 - **Accessibilité** : [a11y Color Contrast](https://color.a11y.com/)
 
 ### Contacts
@@ -118,4 +174,4 @@ Avant de publier :
 
 ---
 
-*Dernière mise à jour : 20 mai 2026 | Version : 0.1.0*
+*Dernière mise à jour : 12 juin 2026 | Version : 0.2.0*
