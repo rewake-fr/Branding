@@ -124,22 +124,27 @@ Utiliser les breakpoints Tailwind v4 standard : `sm:`, `md:`, `lg:`, `xl:`, `2xl
 ## 🏷️ Logo
 
 ### Fichiers Disponibles
-- `/logos/logo_rewake.svg` — Logo principal (couleur `#006045`)
-- `/logos/logo_rewake_white.svg` — Version blanche pour fonds sombres
-- `/logos/logo_rewake_black.svg` — Version noire pour fonds clairs
+- `/logos/rewake_vert_sans_fond.svg` — Logo principal (couleur `#19534f`)
+- `/logos/rewake_vert_fond_blanc.svg` — Logo principal sur fond blanc
+- `/logos/rewake_blanc_sans_fond.svg` — Version blanche pour fonds sombres
+- `/icons/carre_*.svg` — Monogramme carré (vert, vert fond blanc, blanc)
+- `/favicons/favicon.svg` — Favicon
+- `/banners/banniere_rewake.png` — Bannière
+
+Chaque fichier existe aussi en PNG. Aperçu complet : voir le [README](./README.md#-éléments).
 
 ### Tailles Recommandées
 | Contexte | Taille (largeur) | Fichier |
 |----------|------------------|---------|
 | Favicon | 32x32px | `favicon.svg` |
-| Mobile (Header) | 120px | `logo_rewake.svg` |
-| Desktop (Header) | 180px | `logo_rewake.svg` |
-| Hero Section | 250px | `logo_rewake.svg` |
-| Footer | 120px | `logo_rewake_white.svg` |
+| Mobile (Header) | 120px | `rewake_vert_sans_fond.svg` |
+| Desktop (Header) | 180px | `rewake_vert_sans_fond.svg` |
+| Hero Section | 250px | `rewake_vert_sans_fond.svg` |
+| Footer | 120px | `rewake_blanc_sans_fond.svg` |
 
 ### Utilisation Incorrecte ❌
 - Étirer ou déformer le logo
-- Changer la couleur du logo (sauf versions blanche/noire prévues)
+- Changer la couleur du logo (sauf versions verte/blanche prévues)
 - Placer sur un fond de même couleur (manque de contraste)
 
 ---
@@ -155,7 +160,7 @@ Utiliser les breakpoints Tailwind v4 standard : `sm:`, `md:`, `lg:`, `xl:`, `2xl
 
 Avant de publier :
 - [ ] Adaptation mobile testée
-- [ ] Couleur principale `--color-primary` (`#006045`) utilisée correctement
+- [ ] Couleur principale `--color-primary` (`#19534f`) utilisée correctement
 - [ ] Variables CSS (`--color-*`) utilisées plutôt que codes hex
 - [ ] Cohérence avec les exemples existants (app.rewake.fr, sav.rewake.fr)
 
